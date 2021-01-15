@@ -1,33 +1,25 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const lol = new Discord.MessageEmbed()
+	.setColor('#0039ff')
+	.setTitle('règles')
+	.addFields(
+		{ name: "1 règles", value : "Vous devez obligatoirement respecter les **terms of Services** (Tos) de Discord. https:/discord.Com/terms"},
+		{ name: "2 règles", value : "Aucune **insulte** ne sera tolérée, être **respectueux** avec le staff et le membre de la communauté."},
+		{ name: "3 règles", value : "toute sorte de pub (Youtube, Twitch, Discord etc.) sera **sanctionner** d'un avertissement."},
+    { name: "4 règles", value : 'toute sorte de spam est **interdit**. '},
+    { name: "5 règles", value : "Aucun contenu inapproprié (**drogue, suicide, pornographie** etch...). "},
+    { name : "Mercie de bien lire et respecter ses **règles**", value : "Ils peuvent changer lisez-les **régulièrement**."},
+	)
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-   client.channels.cache.get('799416495376695396').send({ embed })
-
+  
 });
 
-const embed = new Discord.MessageEmbed()
-  .setColor('#0099ff')
-  .setTitle('chose à faire')
-  .setAuthor('raph et luke', 'https://i.imgur.com/wSTFkRM.png')
-  .setDescription('')
-  .setThumbnail('https://i.imgur.com/wSTFkRM.png')
-  .addFields(
-    { name: 'les regles', value: '0%' },
-    { name: '\u200B', value: '\u200B' },
-    { name: 'les informations', value: '0%', inline: true },
-    { name: 'les roles', value: '10%', inline: true },
-  )
-  .addField('&', '&', true)
-  .setImage('https://i.imgur.com/wSTFkRM.png')
-  .setTimestamp()
-  .setFooter('Les choses à faire', 'https://i.imgur.com/wSTFkRM.png');
-
-
 client.on('message', msg => {
-  if (msg.content === '!! ') {
-
+  if (msg.content === '!! test') {
+   client.channels.cache.get('778838813333389312').send(lol)
   }
 });
 
