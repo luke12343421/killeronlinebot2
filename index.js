@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const bot = new Discord.Client({disableEveryone: False});
 const lol = new Discord.MessageEmbed()
 	.setColor('#0039ff')
 	.setTitle('règles')
@@ -19,10 +20,11 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === '!! test') {
+	  if (message.member.hasPermission("MANAGE_MESSAGES"))
    client.channels.cache.get(process.env.idchannels).send(lol)
-  }
+	  client.channels.cache.get(process.env.idchannels).send("<everyone>")
+  })
 });
-
 
 
 
