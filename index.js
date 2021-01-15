@@ -4,12 +4,12 @@ const lol = new Discord.MessageEmbed()
 	.setColor('#0039ff')
 	.setTitle('règles')
 	.addFields(
-		{ name: "1 règles", value : "Vous devez obligatoirement respecter les **terms of Services** (Tos) de Discord. https:/discord.Com/terms"},
-		{ name: "2 règles", value : "Aucune **insulte** ne sera tolérée, être **respectueux** avec le staff et le membre de la communauté."},
-		{ name: "3 règles", value : "toute sorte de pub (Youtube, Twitch, Discord etc.) sera **sanctionner** d'un avertissement."},
-    { name: "4 règles", value : 'toute sorte de spam est **interdit**. '},
-    { name: "5 règles", value : "Aucun contenu inapproprié (**drogue, suicide, pornographie** etch...). "},
-    { name : "Mercie de bien lire et respecter ses **règles**", value : "Ils peuvent changer lisez-les **régulièrement**."},
+		{ name: "1 règles", value : process.env.value1},
+		{ name: "2 règles", value : process.env.value2},
+		{ name: "3 règles", value : process.env.value3},
+    { name: "4 règles", value : process.env.value4},
+    { name: "5 règles", value : process.env.value5},
+    { name : "Mercie de bien lire et respecter ses **règles**", value : process.env.value6},
 	)
 
 client.on('ready', () => {
