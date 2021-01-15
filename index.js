@@ -19,7 +19,6 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === '!! test') {
-	  if (message.member.hasPermission("MANAGE_MESSAGES"))
    client.channels.cache.get(process.env.idchannels).send(lol)
 	  client.channels.cache.get(process.env.idchannels).message.send("<@everyone>")
   }
