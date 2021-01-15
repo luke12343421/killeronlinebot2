@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const lol = new Discord.MessageEmbed()
 	.setColor('#0039ff')
-	.setTitle('règles <@everyone>')
+	.setTitle('règles')
 	.addFields(
 		{ name: process.env.name1, value : process.env.value1},
 		{ name: process.env.name2, value : process.env.value2},
