@@ -4,12 +4,12 @@ const lol = new Discord.MessageEmbed()
 	.setColor('#0039ff')
 	.setTitle('règles')
 	.addFields(
-		{ name: "1 règles", value : process.env.value1},
-		{ name: "2 règles", value : process.env.value2},
-		{ name: "3 règles", value : process.env.value3},
-    { name: "4 règles", value : process.env.value4},
-    { name: "5 règles", value : process.env.value5},
-    { name : "Mercie de bien lire et respecter ses **règles**", value : process.env.value6},
+		{ name: process.env.name1, value : process.env.value1},
+		{ name: process.env.name2, value : process.env.value2},
+		{ name: process.env.name3, value : process.env.value3},
+    { name: process.env.name4, value : process.env.value4},
+    { name: process.env.name5, value : process.env.value5},
+    { name : process.env.name6, value : process.env.value6},
 	)
 
 client.on('ready', () => {
