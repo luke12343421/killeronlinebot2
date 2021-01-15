@@ -17,11 +17,11 @@ client.on('ready', () => {
   
 });
 
-client.on('message', msg => {
-  if (msg.content === '!! test') {
-   client.channels.cache.get(process.env.idchannels).send(lol)
-  }
-});
+//client.on('message', msg => {
+//  if (msg.content === '!! test') {
+  //client.channels.cache.get(process.env.idchannels).send(lol)
+// }
+//});
 
 
 
