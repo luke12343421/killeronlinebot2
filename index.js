@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const lol = new Discord.MessageEmbed()
 	.setColor('#0039ff')
-	.setTitle('règles')
+	.setTitle('règles <@everyone>')
 	.addFields(
 		{ name: process.env.name1, value : process.env.value1},
 		{ name: process.env.name2, value : process.env.value2},
@@ -20,7 +20,6 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (msg.content === '!! test') {
    client.channels.cache.get(process.env.idchannels).send(lol)
-	  client.channels.cache.get(process.env.idchannels).message.send("<@everyone>")
   }
 });
 
